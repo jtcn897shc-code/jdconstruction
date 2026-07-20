@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{BUSINESS_NAME}} — {{TAGLINE}}</title>
+  <meta name="description" content="{{BUSINESS_NAME}} — {{TAGLINE}} Serving {{SERVICE_AREA_INLINE}}. Call {{PHONE}}." />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/client-tokens.css" />
+  <script>window.__DESTURA_PHONE_HREF__ = "{{PHONE_HREF}}"; window.__DESTURA_PHONE__ = "{{PHONE}}";</script>
+  <script src="js/main.js" defer></script>
+  <script src="js/chat.js" defer></script>
+</head>
+<body>
+
+  <!-- ================= NAV ================= -->
+  <header class="nav" id="nav">
+    <a href="#top" class="nav__brand">
+      <span class="nav__brand-mark">{{BUSINESS_INITIAL}}</span>
+      {{BUSINESS_NAME}}
+    </a>
+    <nav class="nav__links">
+      <a href="#services">Services</a>
+      <a href="#proof">Our Work</a>
+      <a href="#area">Service Area</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="nav__phone" href="tel:{{PHONE_HREF}}">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      {{PHONE}}
+    </a>
+    <button class="nav__toggle" id="nav-toggle" aria-label="Open menu"><span></span><span></span></button>
+  </header>
+
+  <main id="top">
+    <!-- ================= HERO ================= -->
+    <section class="hero">
+      <div class="hero__scrim" aria-hidden="true"></div>
+      <div class="hero__content shell">
+        <div class="hero__trustline">
+          <span class="hero__badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 3 6v6c0 5 3.8 9.4 9 10 5.2-.6 9-5 9-10V6l-9-4z"/></svg>{{LICENSE_NOTE}}</span>
+          <span class="hero__badge"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.4 7 .8-5.2 4.7 1.5 6.9L12 17l-6.2 3.8 1.5-6.9L2.1 9.2l7-.8z"/></svg>{{RATING}}★ · {{REVIEW_COUNT}}+ reviews</span>
+        </div>
+        <h1 class="hero__title">{{HERO_HEADLINE}}</h1>
+        <p class="hero__sub">{{TAGLINE}} Serving {{SERVICE_AREA_INLINE}}.</p>
+        <div class="hero__actions">
+          <a href="tel:{{PHONE_HREF}}" class="btn btn--call">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Call Now — Same-Day Service
+          </a>
+          <a href="#contact" class="btn btn--ghost btn--on-dark">Get a Free Quote</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= TRUST BAR ================= -->
+    <div class="trustbar">
+      <div class="shell trustbar__row">
+        <span class="trustbar__item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 3 6v6c0 5 3.8 9.4 9 10 5.2-.6 9-5 9-10V6l-9-4z"/></svg>Licensed &amp; Insured</span>
+        <span class="trustbar__item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>24/7 Emergency Service</span>
+        <span class="trustbar__item"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.4 7 .8-5.2 4.7 1.5 6.9L12 17l-6.2 3.8 1.5-6.9L2.1 9.2l7-.8z"/></svg>{{RATING}}★ ({{REVIEW_COUNT}}+ Reviews)</span>
+        <span class="trustbar__item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Family-Owned Since {{FOUNDED_YEAR}}</span>
+      </div>
+    </div>
+
+    <!-- ================= SERVICES ================= -->
+    <section class="section" id="services">
+      <div class="shell">
+        <div class="section__head" data-reveal>
+          <p class="kicker">What We Do</p>
+          <h2 class="section__title">Three trades. One trusted crew.</h2>
+        </div>
+        <div class="services__grid">
+          <!-- REPEAT:services -->
+          <div class="service-card" data-reveal>
+            <span class="service-card__icon">{{SERVICE_ICON}}</span>
+            <h3 class="service-card__title">{{SERVICE_NAME}}</h3>
+            <p class="service-card__line">{{SERVICE_BLURB}}</p>
+          </div>
+          <!-- END:services -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PROOF / JOBS ================= -->
+    <section class="section section--cream" id="proof">
+      <div class="shell">
+        <div class="section__head" data-reveal>
+          <p class="kicker">Recent Work</p>
+          <h2 class="section__title">Real jobs, done right.</h2>
+        </div>
+        <div class="jobs__grid">
+          <!-- REPEAT:jobs -->
+          <div data-reveal>
+            <div class="job-card__frame">
+              <span class="job-card__tag">{{JOB_TITLE}}</span>
+            </div>
+            <div class="job-card__caption">
+              <p class="job-card__title">{{JOB_TITLE}}</p>
+              <p class="job-card__meta">{{JOB_LOCATION}} · {{JOB_CAPTION}}</p>
+            </div>
+          </div>
+          <!-- END:jobs -->
+        </div>
+        <div class="jobs__rating" data-reveal>
+          <span class="jobs__stars">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.4 7 .8-5.2 4.7 1.5 6.9L12 17l-6.2 3.8 1.5-6.9L2.1 9.2l7-.8z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.4 7 .8-5.2 4.7 1.5 6.9L12 17l-6.2 3.8 1.5-6.9L2.1 9.2l7-.8z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.4 7 .8-5.2 4.7 1.5 6.9L12 17l-6.2 3.8 1.5-6.9L2.1 9.2l7-.8z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.4 7 .8-5.2 4.7 1.5 6.9L12 17l-6.2 3.8 1.5-6.9L2.1 9.2l7-.8z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.4 7 .8-5.2 4.7 1.5 6.9L12 17l-6.2 3.8 1.5-6.9L2.1 9.2l7-.8z"/></svg>
+          </span>
+          <p class="jobs__rating-text">{{RATING}} out of 5 <span>from {{REVIEW_COUNT}}+ Google reviews</span></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FINANCING ================= -->
+    <section class="section section--dark">
+      <div class="shell financing">
+        <div data-reveal>
+          <p class="kicker kicker--on-dark">Financing</p>
+          <h2 class="section__title">Don't let cost delay comfort.</h2>
+          <p class="financing__line">{{FINANCING_BLURB}}</p>
+          <a href="#contact" class="btn btn--primary">Ask About Financing</a>
+        </div>
+        <div class="financing__badges" data-reveal>
+          <!-- REPEAT:financingBadges -->
+          <span class="financing__badge">{{FINANCING_BADGE}}</span>
+          <!-- END:financingBadges -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SERVICE AREA ================= -->
+    <section class="section" id="area">
+      <div class="shell area__grid">
+        <div data-reveal>
+          <p class="kicker">Where We Work</p>
+          <h2 class="section__title">Proudly serving the Fraser Valley.</h2>
+          <p class="financing__line" style="color: var(--ash);">Not sure if you're in range? Call us — we cover more ground than most.</p>
+        </div>
+        <ul class="area__list" data-reveal>
+          <!-- REPEAT:serviceArea -->
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>{{CITY}}</li>
+          <!-- END:serviceArea -->
+        </ul>
+      </div>
+    </section>
+
+    <!-- ================= FAQ ================= -->
+    <section class="section section--cream" id="faq">
+      <div class="shell" style="max-width: 780px;">
+        <div class="section__head" data-reveal>
+          <p class="kicker">Questions</p>
+          <h2 class="section__title">Good to know.</h2>
+        </div>
+        <div data-reveal>
+          <!-- REPEAT:faq -->
+          <div class="faq__item">
+            <h3 class="faq__q">{{FAQ_Q}}</h3>
+            <p class="faq__a">{{FAQ_A}}</p>
+          </div>
+          <!-- END:faq -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FINAL CTA ================= -->
+    <section class="cta-final shell" id="contact">
+      <p class="kicker" style="justify-content:center;">Ready When You Are</p>
+      <h2 class="cta-final__title">Something not working right? Let's fix it.</h2>
+      <div class="cta-final__actions">
+        <a href="tel:{{PHONE_HREF}}" class="btn btn--call">Call {{PHONE}}</a>
+        <a href="mailto:{{EMAIL}}" class="btn btn--ghost">Email Us</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="shell footer__row">
+      <span class="footer__brand">{{BUSINESS_NAME}}</span>
+      <span>&copy; {{CURRENT_YEAR}} {{BUSINESS_NAME}}. Serving {{SERVICE_AREA_INLINE}}.</span>
+      <span>{{PHONE}} · {{EMAIL}}</span>
+    </div>
+  </footer>
+
+  <!-- ================= CHAT CONCIERGE ================= -->
+  <button class="chat-trigger" id="chat-trigger" type="button" aria-haspopup="dialog" aria-controls="chat-overlay" aria-expanded="false">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+    Ask {{BUSINESS_NAME}}
+  </button>
+  <div class="chat-overlay" id="chat-overlay" role="dialog" aria-modal="true" aria-label="Ask {{BUSINESS_NAME}}" aria-hidden="true">
+    <div class="chat-bar">
+      <span class="chat-bar__title">{{BUSINESS_NAME}}</span>
+      <button class="chat-close" id="chat-close" aria-label="Close">&times;</button>
+    </div>
+    <div class="chat-thread" id="chat-thread"></div>
+    <div class="chat-suggestions" id="chat-suggestions">
+      <button class="chat-chip" type="button">Do you offer emergency service?</button>
+      <button class="chat-chip" type="button">Do you offer financing?</button>
+      <button class="chat-chip" type="button">What areas do you serve?</button>
+    </div>
+    <form class="chat-input" id="chat-form">
+      <textarea id="chat-field" rows="1" placeholder="Ask a question..." required></textarea>
+      <button class="chat-send" type="submit" aria-label="Send">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4z"/></svg>
+      </button>
+    </form>
+  </div>
+</body>
+</html>
