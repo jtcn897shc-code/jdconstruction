@@ -54,7 +54,7 @@ function expandRepeat(html, key, rows) {
       return s;
     })
     .join("");
-  return html.replace(re, expanded);
+  return html.replace(re, () => expanded); // function form: content with "$" (prices) must not trigger replacement-pattern backreferences
 }
 
 function replaceScalar(html, tokens) {
