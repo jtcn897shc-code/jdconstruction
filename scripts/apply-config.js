@@ -109,7 +109,17 @@ function buildJsonLd() {
     description: config.business.tagline,
     telephone: config.business.phone,
     email: config.business.email,
-    areaServed: config.business.serviceArea.map((c) => ({ "@type": "City", name: c })),
+    // Locality, region and postcode only. The street address is withheld
+    // on purpose: this is a service-area business operating from a rural
+    // address, so the area served is the meaningful signal.
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: config.business.locality,
+      addressRegion: config.business.region,
+      postalCode: config.business.postalCode,
+      addressCountry: config.business.country,
+    },
+    areaServed: config.business.serviceArea.map((c) => ({ "@type": "Place", name: c })),
     knowsAbout: config.services.map((s) => s.name),
     // NOTE: no aggregateRating and no review[] — never emit either until
     // there is a real first-party rating to back it. See DISCOVERY.md.
@@ -203,6 +213,10 @@ function buildIndexHtml() {
     EMAIL: escapeHtml(config.business.email),
     SERVICE_AREA_INLINE: escapeHtml(config.business.serviceArea.join(" · ")),
     SERVICE_AREA_LABEL: escapeHtml(config.business.serviceAreaLabel),
+    WHATSAPP_HREF: escapeHtml(config.business.whatsappHref),
+    LOCALITY: escapeHtml(config.business.locality),
+    REGION: escapeHtml(config.business.region),
+    OWN_WORDS: escapeHtml(config.business.ownWords),
     JOBS_NOTE: escapeHtml(config.proof.jobsNote || ""),
     DIFF_KICKER: escapeHtml(config.differentiator.kicker),
     DIFF_TITLE: escapeHtml(config.differentiator.title),

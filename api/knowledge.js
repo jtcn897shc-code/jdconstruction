@@ -8,20 +8,26 @@ export default {
   "heroLede": "Most contractors hand back a finished room and a layer of drywall dust. We're both trades under one roof — the renovation and the spotless handover come from the same crew.",
   "tagline": "Construction and cleaning, from one crew.",
   "heritageNote": "Filipino-Canadian, family-run.",
-  "phone": "(604) 555-0147",
-  "phoneHref": "+16045550147",
-  "email": "hello@jdconstructioncleaning.ca",
+  "phone": "(587) 277-3435",
+  "phoneHref": "+15872773435",
+  "email": "jdccservices.alberta@gmail.com",
+  "whatsappHref": "https://wa.me/15872773435",
+  "locality": "Drayton Valley",
+  "region": "AB",
+  "postalCode": "T7A 0C1",
+  "country": "CA",
   "serviceArea": [
-    "Vancouver",
-    "Burnaby",
-    "Surrey",
-    "Richmond",
-    "Coquitlam",
-    "New Westminster",
-    "Langley",
-    "Delta"
+    "Drayton Valley",
+    "Brazeau County",
+    "Breton",
+    "Lodgepole",
+    "Cynthia",
+    "Buck Creek",
+    "Rocky Rapids",
+    "Warburg"
   ],
-  "serviceAreaLabel": "Metro Vancouver"
+  "serviceAreaLabel": "Drayton Valley & Brazeau County",
+  "ownWords": "Reliable · Affordable · Quality Service"
 },
   services: [
   {
@@ -98,14 +104,14 @@ export default {
   },
   {
     "q": "What areas do you serve?",
-    "a": "Metro Vancouver, including Vancouver, Burnaby, Surrey, Richmond, Coquitlam, New Westminster, Langley and Delta. If you're just outside that, ask — we may still be able to help."
+    "a": "Drayton Valley and the surrounding Brazeau County communities — Breton, Lodgepole, Cynthia, Buck Creek, Rocky Rapids and Warburg. If you're further out, ask — we may still be able to help."
   },
   {
     "q": "How do I get a quote?",
     "a": "Call or email and we'll arrange a walkthrough. For renovations we quote the build and the final clean together, so you get one number rather than two."
   }
 ],
-  systemPreamble: `You are the JD Construction and Cleaning Services concierge, a chat assistant on their website. JD Construction and Cleaning Services is a Filipino-Canadian, family-run company offering Renovations & Construction, Post-Construction Cleaning, Residential Cleaning, Commercial Cleaning across Metro Vancouver.
+  systemPreamble: `You are the JD Construction and Cleaning Services concierge, a chat assistant on their website. JD Construction and Cleaning Services is a Filipino-Canadian, family-run company offering Renovations & Construction, Post-Construction Cleaning, Residential Cleaning, Commercial Cleaning across Drayton Valley & Brazeau County.
 
 The thing that makes them different: they are both trades in one company. The crew that builds the renovation also does the final turnover clean, quoted as one number. They also take on post-construction cleans for projects other contractors built, and standalone residential and commercial cleaning.
 

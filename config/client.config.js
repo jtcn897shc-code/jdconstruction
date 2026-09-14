@@ -23,17 +23,43 @@ export default {
     heroLede:
       "Most contractors hand back a finished room and a layer of drywall dust. We're both trades under one roof — the renovation and the spotless handover come from the same crew.",
     tagline: "Construction and cleaning, from one crew.",
+    // Worth noting: JD's own Facebook post (Sep 4) leads with "BUILT &
+    // CLEAN, DONE RIGHT" — the dual-trade argument this page is built
+    // around is theirs, not one we invented for them.
 
     // (confirmed) crossed Philippine + Canadian flags, centred in the crest
     heritageNote: "Filipino-Canadian, family-run.",
 
-    phone: "(604) 555-0147", // TODO: reserved fictional range — replace before launch
-    phoneHref: "+16045550147", // TODO: replace before launch
-    email: "hello@jdconstructioncleaning.ca", // TODO: guessed from business name; domain unverified
+    // (confirmed) client's Facebook business page
+    phone: "(587) 277-3435",
+    phoneHref: "+15872773435",
+    email: "jdccservices.alberta@gmail.com",
+    // (confirmed) WhatsApp is an active contact channel on their FB page.
+    whatsappHref: "https://wa.me/15872773435",
 
-    // TODO: BLOCKING. Placeholder region — drives every place-name on the page.
-    serviceArea: ["Vancouver", "Burnaby", "Surrey", "Richmond", "Coquitlam", "New Westminster", "Langley", "Delta"],
-    serviceAreaLabel: "Metro Vancouver",
+    // (confirmed) base of operations: Range Road 81, Brazeau County,
+    // T7A 0C1 — Drayton Valley, AB.
+    //
+    // The street address is deliberately NOT published on the page. Range
+    // Road 81 is a rural address and this reads as a home-based service
+    // business; Google's own guidance for service-area businesses is to
+    // hide the street address and publish the area served instead. The
+    // locality/region/postcode still go into JSON-LD for local SEO. If JD
+    // has a commercial yard or storefront and wants the full address shown,
+    // it's a one-line change here.
+    locality: "Drayton Valley",
+    region: "AB",
+    postalCode: "T7A 0C1",
+    country: "CA",
+
+    // Drayton Valley + surrounding Brazeau County communities.
+    // TODO: confirm how far out they actually travel — this is real local
+    // geography, but the radius is an assumption.
+    serviceArea: ["Drayton Valley", "Brazeau County", "Breton", "Lodgepole", "Cynthia", "Buck Creek", "Rocky Rapids", "Warburg"],
+    serviceAreaLabel: "Drayton Valley & Brazeau County",
+
+    // (confirmed) their own stated tagline on Facebook.
+    ownWords: "Reliable · Affordable · Quality Service",
   },
 
   // Every value pixel-sampled from the client's logo. See DESIGN.md for the
@@ -116,11 +142,12 @@ export default {
   ],
 
   proof: {
-    // INTENTIONALLY EMPTY. Publishing invented reviews or ratings for a real,
-    // named business is deceptive advertising (Competition Act s.74.01 in
-    // Canada; FTC endorsement rules in the US). The template renders the
-    // proof section only when this array has real, attributable entries, and
-    // emits no aggregateRating in JSON-LD while it's empty. See DISCOVERY.md.
+    // INTENTIONALLY EMPTY — and now confirmed, not just cautious: JD's
+    // Facebook page reads "Not yet rated (0 reviews)". There is no rating
+    // to publish, so the proof section stays out of the DOM and no
+    // aggregateRating is emitted in JSON-LD. Publishing invented reviews
+    // for a real, named business is deceptive advertising (Competition Act
+    // s.74.01 in Canada; FTC endorsement rules in the US).
     reviews: [],
 
     // TODO: replace with real job photos. Strip EXIF first — camera originals
@@ -154,7 +181,7 @@ export default {
     },
     {
       q: "What areas do you serve?",
-      a: "Metro Vancouver, including Vancouver, Burnaby, Surrey, Richmond, Coquitlam, New Westminster, Langley and Delta. If you're just outside that, ask — we may still be able to help.",
+      a: "Drayton Valley and the surrounding Brazeau County communities — Breton, Lodgepole, Cynthia, Buck Creek, Rocky Rapids and Warburg. If you're further out, ask — we may still be able to help.",
     },
     {
       q: "How do I get a quote?",
