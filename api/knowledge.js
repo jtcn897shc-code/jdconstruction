@@ -2,85 +2,123 @@
 // Edit config/client.config.js and re-run the script instead.
 export default {
   business: {
-  "name": "Ridgeline Home Services",
-  "heroHeadline": "Trusted HVAC, plumbing & electrical for the Fraser Valley.",
-  "tagline": "Heating, cooling, plumbing & electrical — done right the first time.",
-  "phone": "(604) 555-0142",
-  "phoneHref": "+16045550142",
-  "email": "hello@ridgelinehomeservices.ca",
-  "foundedYear": "2009",
+  "name": "JD Construction and Cleaning Services",
+  "shortName": "JD",
+  "heroHeadline": "We build it.<em>Then we clean it.</em>",
+  "heroLede": "Most contractors hand back a finished room and a layer of drywall dust. We're both trades under one roof — the renovation and the spotless handover come from the same crew.",
+  "tagline": "Construction and cleaning, from one crew.",
+  "heritageNote": "Filipino-Canadian, family-run.",
+  "phone": "(604) 555-0147",
+  "phoneHref": "+16045550147",
+  "email": "hello@jdconstructioncleaning.ca",
   "serviceArea": [
-    "Abbotsford",
-    "Chilliwack",
-    "Mission",
-    "Langley",
+    "Vancouver",
+    "Burnaby",
     "Surrey",
-    "Maple Ridge"
+    "Richmond",
+    "Coquitlam",
+    "New Westminster",
+    "Langley",
+    "Delta"
   ],
-  "licenseNote": "Fully licensed, bonded & insured across all trades."
+  "serviceAreaLabel": "Metro Vancouver"
 },
   services: [
   {
-    "name": "Heating & Cooling",
-    "blurb": "Furnace repair, AC installs, heat pumps, and seasonal maintenance plans that keep small problems from becoming expensive ones."
+    "name": "Renovations & Construction",
+    "kind": "construction",
+    "blurb": "Kitchens, bathrooms, basements and full interior renovations — framing through finishing carpentry. Built properly, and handed back clean.",
+    "lead": true
   },
   {
-    "name": "Plumbing",
-    "blurb": "Leak repair, drain cleaning, water heater installs, and fixture work — done clean, done once."
+    "name": "Post-Construction Cleaning",
+    "kind": "postconstruction",
+    "blurb": "The deep turnover clean after the trades leave: drywall dust, paint spatter, adhesive residue, window and fixture detail. Available on jobs we didn't build."
   },
   {
-    "name": "Electrical",
-    "blurb": "Panel upgrades, rewiring, EV charger installs, and lighting — licensed electricians, not handymen."
+    "name": "Residential Cleaning",
+    "kind": "residential",
+    "blurb": "Recurring housekeeping, seasonal deep cleans, and move-in / move-out turnovers that actually pass an inspection."
+  },
+  {
+    "name": "Commercial Cleaning",
+    "kind": "commercial",
+    "blurb": "Offices, retail units and strata common areas, scheduled around your hours instead of ours."
   }
 ],
-  proof: {
-  "rating": "4.9",
-  "reviewCount": "310",
-  "badges": [
-    "Licensed & Insured",
-    "Bonded",
-    "Family-Owned Since 2009"
+  differentiator: {
+  "kicker": "Why JD",
+  "title": "One crew, start to spotless.",
+  "body": "Hiring a contractor usually means hiring a cleaner afterwards — and chasing two companies, two schedules, two invoices. We do both. The people who built it are the people who clean it, so nothing gets blamed on the other trade.",
+  "points": [
+    {
+      "title": "No second phone call",
+      "body": "The final clean is part of the job, not a separate contract you have to arrange while living in a construction zone."
+    },
+    {
+      "title": "Nothing gets left for someone else",
+      "body": "When the same crew builds and cleans, there's no argument about whose dust it is. It just gets done."
+    },
+    {
+      "title": "We also clean for other builders",
+      "body": "Contractors hire us for post-construction turnovers on jobs we didn't build. It's a service line, not an afterthought."
+    }
   ]
 },
-  financing: {
-  "blurb": "Big-ticket jobs shouldn't wait on a bank transfer. Flexible financing is available on system installs and replacements, with same-day approval in most cases.",
-  "badges": [
-    "0% Financing Available",
-    "Same-Day Approval",
-    "Flexible Terms"
-  ]
-},
-  faq: [
+  process: [
   {
-    "q": "Do you offer emergency service?",
-    "a": "Yes — we're available 24/7 for no-heat, no-cool, active leaks, and electrical emergencies. Call anytime."
+    "title": "Walkthrough",
+    "body": "We look at the space in person and quote the build and the final clean together, in one number."
   },
   {
-    "q": "Are you licensed and insured?",
-    "a": "Yes, fully licensed, bonded, and insured across HVAC, plumbing, and electrical work."
+    "title": "Build",
+    "body": "Construction runs with the site kept contained — dust barriers up, walkways protected, tools off your floors nightly."
+  },
+  {
+    "title": "Final clean",
+    "body": "The same company returns for the turnover clean. No handoff, no second contract, no waiting on another crew's calendar."
+  },
+  {
+    "title": "Handover",
+    "body": "You walk the finished space with us before we call it done. If something isn't right, we're still standing there."
+  }
+],
+  faq: [
+  {
+    "q": "Do you really do both construction and cleaning?",
+    "a": "Yes — that's the whole idea, and it's the name on the door. Most clients hire us for a renovation and the final clean comes with it. You can also book either one on its own."
+  },
+  {
+    "q": "Can I book cleaning without a renovation?",
+    "a": "Absolutely. Recurring residential cleaning, one-off deep cleans, move-in and move-out turnovers, and commercial contracts are all standalone services."
+  },
+  {
+    "q": "Do you do post-construction cleanup for other contractors?",
+    "a": "Yes. Builders and renovators hire us for turnover cleans on projects we had no part in building. Get in touch with the site details and timeline."
   },
   {
     "q": "What areas do you serve?",
-    "a": "Abbotsford, Chilliwack, Mission, Langley, Surrey, and Maple Ridge — reach out if you're just outside this area, we may still be able to help."
+    "a": "Metro Vancouver, including Vancouver, Burnaby, Surrey, Richmond, Coquitlam, New Westminster, Langley and Delta. If you're just outside that, ask — we may still be able to help."
   },
   {
-    "q": "Do you offer financing for big jobs?",
-    "a": "Yes, flexible financing is available on system installs and replacements, with same-day approval in most cases."
-  },
-  {
-    "q": "How do I book a service call?",
-    "a": "Call us directly for anything urgent, or use the chat on this site to get a quote and find a time that works."
+    "q": "How do I get a quote?",
+    "a": "Call or email and we'll arrange a walkthrough. For renovations we quote the build and the final clean together, so you get one number rather than two."
   }
 ],
-  systemPreamble: `You are the Ridgeline Home Services concierge, a chat assistant embedded on their website. Ridgeline Home Services provides Heating & Cooling, Plumbing, Electrical for homeowners in Abbotsford, Chilliwack, Mission, Langley, Surrey, Maple Ridge.
+  systemPreamble: `You are the JD Construction and Cleaning Services concierge, a chat assistant on their website. JD Construction and Cleaning Services is a Filipino-Canadian, family-run company offering Renovations & Construction, Post-Construction Cleaning, Residential Cleaning, Commercial Cleaning across Metro Vancouver.
 
-Your job: answer visitor questions clearly and briefly, using ONLY the facts provided to you in this system context (business info, services, trust info, financing, FAQ). Never invent pricing, timelines, technologies, or claims not in that data.
+The thing that makes them different: they are both trades in one company. The crew that builds the renovation also does the final turnover clean, quoted as one number. They also take on post-construction cleans for projects other contractors built, and standalone residential and commercial cleaning.
+
+Your job: answer visitor questions clearly and briefly, using ONLY the facts provided in this system context. Never invent pricing, timelines, availability, or credentials.
+
+Hard limits — these are not in your data, so never assert them: licensing, bonding, insurance or WorkSafeBC status; years in business; customer ratings, review counts, or testimonials; specific prices. If asked about any of these, say you don't want to quote it secondhand and point them to a call.
+There are no published customer reviews on this site yet. If asked about reviews or ratings, say so plainly rather than describing any.
 
 Tone: plainspoken, direct, warm but not salesy — no hype, no exclamation points, no "great question!" filler.
 
-Scope: if asked something unrelated to Ridgeline Home Services or its services, politely decline and steer back to how Ridgeline Home Services can help or to calling directly.
+Scope: if asked something unrelated to JD Construction and Cleaning Services, politely decline and steer back to how they can help, or to calling directly.
 
-Booking: whenever the visitor signals they want a quote, want to book a service, or have an emergency, end your message with the literal marker [[BOOK_CTA]] on its own at the very end. Only include it when it's genuinely the right next step — not on every message.
+Booking: whenever the visitor signals they want a quote, want to book, or describe an urgent problem, end your message with the literal marker [[BOOK_CTA]] on its own at the very end. Only when it's genuinely the right next step — not on every message.
 
 Keep replies short — a few sentences at most. This is a chat, not an essay.`,
 };

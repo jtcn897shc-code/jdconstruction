@@ -30,7 +30,7 @@
 
   function getFocusable() {
     return Array.prototype.slice
-      .call(overlay.querySelectorAll('button, textarea, [href], input, [tabindex]:not([tabindex="-1"])'))
+      .call(overlay.querySelectorAll('button, textarea, summary, [href], input, [tabindex]:not([tabindex="-1"])'))
       .filter(function (el) { return !el.disabled && el.offsetParent !== null; });
   }
 
@@ -66,7 +66,15 @@
     else trigger.focus();
   }
 
-  trigger.addEventListener("click", function () { isOpen() ? close() : open(); });
+  // The trigger is a real <a href="tel:..."> in the markup. We reach this
+  // line only after confirming both the trigger and the overlay exist, so
+  // it is safe to intercept the click; if this script never runs, or the
+  // overlay is missing, the tel: link stands and the visitor still gets
+  // through to a person.
+  trigger.addEventListener("click", function (e) {
+    e.preventDefault();
+    isOpen() ? close() : open();
+  });
   if (closeBtn) closeBtn.addEventListener("click", close);
   overlay.addEventListener("click", function (e) { if (e.target === overlay) close(); });
 
@@ -86,7 +94,7 @@
     wrap.className = "chat-cta";
     const a = document.createElement("a");
     a.href = "tel:" + PHONE_HREF;
-    a.className = "btn btn--call";
+    a.className = "btn btn--gold";
     a.textContent = "Call " + PHONE;
     wrap.appendChild(a);
     thread.appendChild(wrap);
@@ -146,7 +154,7 @@
       thinking.remove();
       if (!assistantRow) assistantRow = addTurn("assistant", "");
       assistantRow.querySelector("p").textContent =
-        "Something went wrong on my end — please call us directly instead.";
+        "Something went wrong on my end. Please call us directly — we'll pick up.";
       addCallCta();
       sending = false;
       return;
