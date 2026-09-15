@@ -1,0 +1,51 @@
+# Deploy the static site to GitHub Pages on every push to this branch.
+#
+# No build step: index.html, css/, js/, images/ and fonts/ are the
+# already-generated, checked-in output of `node scripts/apply-config.js`
+# (see scripts/apply-config.js and DISCOVERY.md). This workflow just
+# publishes the repo root as-is.
+#
+# NOTE: api/chat.js and api/knowledge.js are the serverless chat endpoint —
+# GitHub Pages serves static files only, so /api/chat will 404 here. The
+# chat widget is built to degrade gracefully on that failure (falls back to
+# a working `tel:` link) — see js/chat.js. The real chat endpoint needs a
+# host that runs serverless functions (Vercel, per this repo's homepage
+# field, or similar).
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - claude/home-service-website-design-3s3zyl
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload site
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: "."
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
