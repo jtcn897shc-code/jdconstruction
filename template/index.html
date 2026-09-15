@@ -4,62 +4,106 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{{BUSINESS_NAME}} — {{TAGLINE}}</title>
-  <meta name="description" content="{{BUSINESS_NAME}} — {{TAGLINE}} Serving {{SERVICE_AREA_INLINE}}. Call {{PHONE}}." />
+  <meta name="description" content="{{BUSINESS_NAME}} — {{TAGLINE}} Renovations and cleaning from one crew, serving {{SERVICE_AREA_INLINE}}. Call {{PHONE}}." />
+  <meta name="theme-color" content="{{BRAND_INK}}" />
+  <link rel="icon" href="images/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png" />
+  <link rel="apple-touch-icon" href="images/favicon-180.png" />
+  <meta property="og:title" content="{{BUSINESS_NAME}}" />
+  <meta property="og:description" content="{{TAGLINE}}" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="images/favicon-512.png" />
+  <link rel="preload" href="fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="stylesheet" href="css/client-tokens.css" />
+  <!-- Reveal-on-scroll is OPT-IN, set before first paint. If JS never runs,
+       nothing is ever hidden and the full page renders. See DESIGN.md §4. -->
+  <script>document.documentElement.classList.add("js");</script>
   <script>window.__DESTURA_PHONE_HREF__ = "{{PHONE_HREF}}"; window.__DESTURA_PHONE__ = "{{PHONE}}";</script>
   <script src="js/main.js" defer></script>
   <script src="js/chat.js" defer></script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
   <!-- ================= NAV ================= -->
   <header class="nav" id="nav">
-    <a href="#top" class="nav__brand">
-      <span class="nav__brand-mark">{{BUSINESS_INITIAL}}</span>
-      {{BUSINESS_NAME}}
-    </a>
-    <nav class="nav__links">
-      <a href="#services">Services</a>
-      <a href="#proof">Our Work</a>
-      <a href="#area">Service Area</a>
-      <a href="#faq">FAQ</a>
-    </nav>
-    <a class="nav__phone" href="tel:{{PHONE_HREF}}">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-      {{PHONE}}
-    </a>
-    <button class="nav__toggle" id="nav-toggle" aria-label="Open menu"><span></span><span></span></button>
+    <div class="nav__inner">
+      <a href="#top" class="nav__brand" aria-label="{{BUSINESS_NAME}} — home">
+        <img class="nav__logo" src="{{LOGO_SRC}}" alt="" width="60" height="61" decoding="async" />
+        <span class="nav__brand-text">
+          <span class="nav__brand-name">{{SHORT_NAME}}</span>
+          <span class="nav__brand-sub">Construction &amp; Cleaning</span>
+        </span>
+      </a>
+      <nav class="nav__links" id="nav-links" aria-label="Primary">
+        <a href="#services">Services</a>
+        <a href="#why">Why JD</a>
+        <a href="#process">Process</a>
+        <a href="#area">Service Area</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <div class="nav__end">
+        <a class="nav__phone" href="tel:{{PHONE_HREF}}">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span>{{PHONE}}</span>
+        </a>
+        <button class="nav__toggle" id="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
   </header>
 
-  <main id="top">
-    <!-- ================= HERO ================= -->
-    <section class="hero">
-      <div class="hero__scrim" aria-hidden="true"></div>
-      <div class="hero__content shell">
-        <div class="hero__trustline">
-          <span class="hero__badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 3 6v6c0 5 3.8 9.4 9 10 5.2-.6 9-5 9-10V6l-9-4z"/></svg>{{LICENSE_NOTE}}</span>
-          <span class="hero__badge"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.4 7 .8-5.2 4.7 1.5 6.9L12 17l-6.2 3.8 1.5-6.9L2.1 9.2l7-.8z"/></svg>{{RATING}}★ · {{REVIEW_COUNT}}+ reviews</span>
+  <main id="main">
+    <!-- ================= HERO =================
+         Typographic, not photographic: no stock image to load, so there is
+         no broken-image or slow-LCP failure mode. The crest is the only
+         ornament (DESIGN.md §5). -->
+    <section class="hero" id="top">
+      <div class="hero__field" aria-hidden="true"></div>
+      <div class="shell hero__inner">
+        <div class="hero__copy">
+          <p class="hero__eyebrow"><span class="diamond" aria-hidden="true"></span>{{HERITAGE_NOTE}}</p>
+          <h1 class="hero__title">{{HERO_HEADLINE}}</h1>
+          <p class="hero__lede">{{HERO_LEDE}}</p>
+          <div class="hero__actions">
+            <a href="tel:{{PHONE_HREF}}" class="btn btn--gold">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              Call {{PHONE}}
+            </a>
+            <a href="mailto:{{EMAIL}}?subject=Quote%20request" class="btn btn--outline">Request a walkthrough</a>
+          </div>
+          <p class="hero__note">Serving {{SERVICE_AREA_LABEL}} · {{OWN_WORDS}}</p>
         </div>
-        <h1 class="hero__title">{{HERO_HEADLINE}}</h1>
-        <p class="hero__sub">{{TAGLINE}} Serving {{SERVICE_AREA_INLINE}}.</p>
-        <div class="hero__actions">
-          <a href="tel:{{PHONE_HREF}}" class="btn btn--call">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            Call Now — Same-Day Service
-          </a>
-          <a href="#contact" class="btn btn--ghost btn--on-dark">Get a Free Quote</a>
+        <div class="hero__crest">
+          <img src="{{LOGO_SRC}}" alt="{{LOGO_ALT}}" width="538" height="547" fetchpriority="high" decoding="async" />
         </div>
       </div>
     </section>
 
-    <!-- ================= TRUST BAR ================= -->
-    <div class="trustbar">
-      <div class="shell trustbar__row">
-        <span class="trustbar__item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 3 6v6c0 5 3.8 9.4 9 10 5.2-.6 9-5 9-10V6l-9-4z"/></svg>Licensed &amp; Insured</span>
-        <span class="trustbar__item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>24/7 Emergency Service</span>
-        <span class="trustbar__item"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.4 7 .8-5.2 4.7 1.5 6.9L12 17l-6.2 3.8 1.5-6.9L2.1 9.2l7-.8z"/></svg>{{RATING}}★ ({{REVIEW_COUNT}}+ Reviews)</span>
-        <span class="trustbar__item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Family-Owned Since {{FOUNDED_YEAR}}</span>
+    <!-- ================= TRUST BAND =================
+         Only claims we can actually stand behind. No review counts, no
+         years-in-business, no licensing claims — see DISCOVERY.md. -->
+    <div class="band">
+      <div class="shell band__row">
+        <span class="band__item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-6h6v6"/></svg>
+          Both trades, one company
+        </span>
+        <span class="band__item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          {{HERITAGE_NOTE}}
+        </span>
+        <span class="band__item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          {{SERVICE_AREA_LABEL}}
+        </span>
+        <span class="band__item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+          Build &amp; clean quoted as one number
+        </span>
       </div>
     </div>
 
@@ -67,147 +111,223 @@
     <section class="section" id="services">
       <div class="shell">
         <div class="section__head" data-reveal>
-          <p class="kicker">What We Do</p>
-          <h2 class="section__title">Three trades. One trusted crew.</h2>
+          <p class="kicker"><span class="diamond" aria-hidden="true"></span>What we do</p>
+          <h2 class="section__title">Four services. Two trades. One crew.</h2>
         </div>
-        <div class="services__grid">
+        <div class="services">
           <!-- REPEAT:services -->
-          <div class="service-card" data-reveal>
-            <span class="service-card__icon">{{SERVICE_ICON}}</span>
-            <h3 class="service-card__title">{{SERVICE_NAME}}</h3>
-            <p class="service-card__line">{{SERVICE_BLURB}}</p>
-          </div>
+          <article class="svc {{SERVICE_LEAD_CLASS}}" data-reveal>
+            <span class="svc__icon">{{SERVICE_ICON}}</span>
+            <h3 class="svc__title">{{SERVICE_NAME}}</h3>
+            <p class="svc__blurb">{{SERVICE_BLURB}}</p>
+          </article>
           <!-- END:services -->
         </div>
       </div>
     </section>
 
-    <!-- ================= PROOF / JOBS ================= -->
-    <section class="section section--cream" id="proof">
+    <!-- ================= DIFFERENTIATOR ================= -->
+    <section class="section section--ink" id="why">
+      <div class="shell why">
+        <div class="why__lead" data-reveal>
+          <p class="kicker kicker--dark"><span class="diamond" aria-hidden="true"></span>{{DIFF_KICKER}}</p>
+          <h2 class="section__title">{{DIFF_TITLE}}</h2>
+          <p class="why__body">{{DIFF_BODY}}</p>
+          <a href="mailto:{{EMAIL}}?subject=Quote%20request" class="btn btn--gold">Get one quote for both</a>
+        </div>
+        <ul class="why__points">
+          <!-- REPEAT:diffPoints -->
+          <li class="why__point" data-reveal>
+            <h3 class="why__point-title">{{POINT_TITLE}}</h3>
+            <p class="why__point-body">{{POINT_BODY}}</p>
+          </li>
+          <!-- END:diffPoints -->
+        </ul>
+      </div>
+    </section>
+
+    <!-- ================= PROCESS ================= -->
+    <section class="section" id="process">
       <div class="shell">
         <div class="section__head" data-reveal>
-          <p class="kicker">Recent Work</p>
-          <h2 class="section__title">Real jobs, done right.</h2>
+          <p class="kicker"><span class="diamond" aria-hidden="true"></span>How it runs</p>
+          <h2 class="section__title">From walkthrough to handover.</h2>
         </div>
-        <div class="jobs__grid">
+        <ol class="steps">
+          <!-- REPEAT:process -->
+          <li class="step" data-reveal>
+            <span class="step__num">{{STEP_NUM}}</span>
+            <h3 class="step__title">{{STEP_TITLE}}</h3>
+            <p class="step__body">{{STEP_BODY}}</p>
+          </li>
+          <!-- END:process -->
+        </ol>
+      </div>
+    </section>
+
+    <!-- ================= WORK ================= -->
+    <section class="section section--mist" id="work">
+      <div class="shell">
+        <div class="section__head" data-reveal>
+          <p class="kicker"><span class="diamond" aria-hidden="true"></span>Recent work</p>
+          <h2 class="section__title">The work we hand back.</h2>
+          <p class="section__note">{{JOBS_NOTE}}</p>
+        </div>
+        <div class="jobs">
           <!-- REPEAT:jobs -->
-          <div data-reveal>
-            <div class="job-card__frame">
-              <span class="job-card__tag">{{JOB_TITLE}}</span>
+          <figure class="job" data-reveal>
+            <div class="job__frame" data-kind="{{JOB_KIND}}">
+              <span class="job__placeholder">{{JOB_PLACEHOLDER}}</span>
             </div>
-            <div class="job-card__caption">
-              <p class="job-card__title">{{JOB_TITLE}}</p>
-              <p class="job-card__meta">{{JOB_LOCATION}} · {{JOB_CAPTION}}</p>
-            </div>
-          </div>
+            <figcaption class="job__cap">
+              <p class="job__title">{{JOB_TITLE}}</p>
+            </figcaption>
+          </figure>
           <!-- END:jobs -->
-        </div>
-        <div class="jobs__rating" data-reveal>
-          <span class="jobs__stars">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.4 7 .8-5.2 4.7 1.5 6.9L12 17l-6.2 3.8 1.5-6.9L2.1 9.2l7-.8z"/></svg>
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.4 7 .8-5.2 4.7 1.5 6.9L12 17l-6.2 3.8 1.5-6.9L2.1 9.2l7-.8z"/></svg>
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.4 7 .8-5.2 4.7 1.5 6.9L12 17l-6.2 3.8 1.5-6.9L2.1 9.2l7-.8z"/></svg>
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.4 7 .8-5.2 4.7 1.5 6.9L12 17l-6.2 3.8 1.5-6.9L2.1 9.2l7-.8z"/></svg>
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.4 7 .8-5.2 4.7 1.5 6.9L12 17l-6.2 3.8 1.5-6.9L2.1 9.2l7-.8z"/></svg>
-          </span>
-          <p class="jobs__rating-text">{{RATING}} out of 5 <span>from {{REVIEW_COUNT}}+ Google reviews</span></p>
         </div>
       </div>
     </section>
 
-    <!-- ================= FINANCING ================= -->
-    <section class="section section--dark">
-      <div class="shell financing">
-        <div data-reveal>
-          <p class="kicker kicker--on-dark">Financing</p>
-          <h2 class="section__title">Don't let cost delay comfort.</h2>
-          <p class="financing__line">{{FINANCING_BLURB}}</p>
-          <a href="#contact" class="btn btn--primary">Ask About Financing</a>
+    <!-- ================= REVIEWS =================
+         Rendered ONLY when config.proof.reviews has real, attributable
+         entries. Currently empty on purpose — see DISCOVERY.md. -->
+    <!-- IF:hasReviews -->
+    <section class="section" id="reviews">
+      <div class="shell">
+        <div class="section__head" data-reveal>
+          <p class="kicker"><span class="diamond" aria-hidden="true"></span>In their words</p>
+          <h2 class="section__title">What clients say.</h2>
         </div>
-        <div class="financing__badges" data-reveal>
-          <!-- REPEAT:financingBadges -->
-          <span class="financing__badge">{{FINANCING_BADGE}}</span>
-          <!-- END:financingBadges -->
+        <div class="quotes">
+          <!-- REPEAT:reviews -->
+          <blockquote class="quote" data-reveal>
+            <p class="quote__text">{{REVIEW_TEXT}}</p>
+            <cite class="quote__by">{{REVIEW_AUTHOR}}<span>{{REVIEW_META}}</span></cite>
+          </blockquote>
+          <!-- END:reviews -->
         </div>
       </div>
     </section>
+    <!-- END_IF:hasReviews -->
 
     <!-- ================= SERVICE AREA ================= -->
     <section class="section" id="area">
-      <div class="shell area__grid">
+      <div class="shell area">
         <div data-reveal>
-          <p class="kicker">Where We Work</p>
-          <h2 class="section__title">Proudly serving the Fraser Valley.</h2>
-          <p class="financing__line" style="color: var(--ash);">Not sure if you're in range? Call us — we cover more ground than most.</p>
+          <p class="kicker"><span class="diamond" aria-hidden="true"></span>Where we work</p>
+          <h2 class="section__title">Across {{SERVICE_AREA_LABEL}}.</h2>
+          <p class="area__note">Not sure if you're in range? Call and ask — we cover more ground than the list suggests.</p>
         </div>
         <ul class="area__list" data-reveal>
           <!-- REPEAT:serviceArea -->
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>{{CITY}}</li>
+          <li><span class="diamond diamond--sm" aria-hidden="true"></span>{{CITY}}</li>
           <!-- END:serviceArea -->
         </ul>
       </div>
     </section>
 
     <!-- ================= FAQ ================= -->
-    <section class="section section--cream" id="faq">
-      <div class="shell" style="max-width: 780px;">
+    <section class="section section--mist" id="faq">
+      <div class="shell shell--narrow">
         <div class="section__head" data-reveal>
-          <p class="kicker">Questions</p>
+          <p class="kicker"><span class="diamond" aria-hidden="true"></span>Questions</p>
           <h2 class="section__title">Good to know.</h2>
         </div>
-        <div data-reveal>
+        <div class="faq" data-reveal>
           <!-- REPEAT:faq -->
-          <div class="faq__item">
-            <h3 class="faq__q">{{FAQ_Q}}</h3>
-            <p class="faq__a">{{FAQ_A}}</p>
-          </div>
+          <details class="faq__item">
+            <summary class="faq__q">{{FAQ_Q}}<span class="faq__mark" aria-hidden="true"></span></summary>
+            <div class="faq__a"><p>{{FAQ_A}}</p></div>
+          </details>
           <!-- END:faq -->
         </div>
       </div>
     </section>
 
     <!-- ================= FINAL CTA ================= -->
-    <section class="cta-final shell" id="contact">
-      <p class="kicker" style="justify-content:center;">Ready When You Are</p>
-      <h2 class="cta-final__title">Something not working right? Let's fix it.</h2>
-      <div class="cta-final__actions">
-        <a href="tel:{{PHONE_HREF}}" class="btn btn--call">Call {{PHONE}}</a>
-        <a href="mailto:{{EMAIL}}" class="btn btn--ghost">Email Us</a>
+    <section class="section section--ink cta" id="contact">
+      <div class="shell cta__inner">
+        <p class="kicker kicker--dark" style="justify-content:center;"><span class="diamond" aria-hidden="true"></span>Ready when you are</p>
+        <h2 class="cta__title">Building something, or just need it spotless?</h2>
+        <p class="cta__lede">Tell us what the space needs. We'll quote the build and the clean together.</p>
+        <div class="cta__actions">
+          <a href="tel:{{PHONE_HREF}}" class="btn btn--gold">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Call {{PHONE}}
+          </a>
+          <a href="{{WHATSAPP_HREF}}" class="btn btn--outline" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.14-.14.3-.35.45-.53.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.38-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.07-.13-.27-.2-.57-.35z"/><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.87 9.87 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2zm0 18.15h-.01c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.25-8.23 2.2 0 4.27.86 5.83 2.42a8.19 8.19 0 0 1 2.41 5.82c0 4.54-3.7 8.23-8.23 8.23z"/></svg>
+            WhatsApp
+          </a>
+          <a href="mailto:{{EMAIL}}?subject=Quote%20request" class="btn btn--outline">Email us</a>
+        </div>
+        <p class="cta__where">{{SERVICE_AREA_LABEL}} · {{OWN_WORDS}}</p>
       </div>
     </section>
   </main>
 
   <!-- ================= FOOTER ================= -->
   <footer class="footer">
-    <div class="shell footer__row">
-      <span class="footer__brand">{{BUSINESS_NAME}}</span>
-      <span>&copy; {{CURRENT_YEAR}} {{BUSINESS_NAME}}. Serving {{SERVICE_AREA_INLINE}}.</span>
-      <span>{{PHONE}} · {{EMAIL}}</span>
+    <div class="shell footer__grid">
+      <div class="footer__brand">
+        <img class="footer__logo" src="{{LOGO_SRC}}" alt="" width="84" height="85" loading="lazy" decoding="async" />
+        <p class="footer__name">{{BUSINESS_NAME}}</p>
+        <p class="footer__tag">{{HERITAGE_NOTE}}</p>
+      </div>
+      <div class="footer__col">
+        <p class="footer__h">Services</p>
+        <!-- REPEAT:footerServices -->
+        <a href="#services">{{SERVICE_NAME}}</a>
+        <!-- END:footerServices -->
+      </div>
+      <div class="footer__col">
+        <p class="footer__h">Contact</p>
+        <a href="tel:{{PHONE_HREF}}">{{PHONE}}</a>
+        <a href="{{WHATSAPP_HREF}}" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="mailto:{{EMAIL}}">{{EMAIL}}</a>
+        <p class="footer__muted">{{LOCALITY}}, {{REGION}}</p>
+        <p class="footer__muted">Serving {{SERVICE_AREA_INLINE}}</p>
+      </div>
+    </div>
+    <div class="shell footer__base">
+      <span>&copy; {{CURRENT_YEAR}} {{BUSINESS_NAME}}.</span>
+      <span>{{SERVICE_AREA_LABEL}}</span>
     </div>
   </footer>
 
-  <!-- ================= CHAT CONCIERGE ================= -->
-  <button class="chat-trigger" id="chat-trigger" type="button" aria-haspopup="dialog" aria-controls="chat-overlay" aria-expanded="false">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-    Ask {{BUSINESS_NAME}}
-  </button>
+  <!-- ================= CHAT CONCIERGE =================
+       The trigger is an <a> with a real tel: href, not a <button>. JS
+       upgrades it to the chat overlay only after confirming it can; if JS
+       fails the visitor still reaches a working phone link. -->
+  <a class="chat-trigger" id="chat-trigger" href="tel:{{PHONE_HREF}}" aria-label="Ask {{BUSINESS_NAME}} — open chat" aria-haspopup="dialog" aria-controls="chat-overlay" aria-expanded="false">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+    <span class="chat-trigger__label">Ask {{SHORT_NAME}}</span>
+  </a>
   <div class="chat-overlay" id="chat-overlay" role="dialog" aria-modal="true" aria-label="Ask {{BUSINESS_NAME}}" aria-hidden="true">
     <div class="chat-bar">
-      <span class="chat-bar__title">{{BUSINESS_NAME}}</span>
-      <button class="chat-close" id="chat-close" aria-label="Close">&times;</button>
+      <span class="chat-bar__title">Ask {{BUSINESS_NAME}}</span>
+      <button class="chat-close" id="chat-close" type="button" aria-label="Close chat">&times;</button>
     </div>
     <div class="chat-thread" id="chat-thread"></div>
     <div class="chat-suggestions" id="chat-suggestions">
-      <button class="chat-chip" type="button">Do you offer emergency service?</button>
-      <button class="chat-chip" type="button">Do you offer financing?</button>
+      <button class="chat-chip" type="button">Do you do both construction and cleaning?</button>
+      <button class="chat-chip" type="button">Can I book cleaning on its own?</button>
       <button class="chat-chip" type="button">What areas do you serve?</button>
     </div>
     <form class="chat-input" id="chat-form">
-      <textarea id="chat-field" rows="1" placeholder="Ask a question..." required></textarea>
+      <textarea id="chat-field" rows="1" placeholder="Ask a question…" aria-label="Your question" required></textarea>
       <button class="chat-send" type="submit" aria-label="Send">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4z"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4z"/></svg>
       </button>
     </form>
+    <details class="chat-fallback">
+      <summary>Rather talk to a person?</summary>
+      <p>Call <a href="tel:{{PHONE_HREF}}">{{PHONE}}</a>, message us on <a href="{{WHATSAPP_HREF}}" target="_blank" rel="noopener">WhatsApp</a>, or email <a href="mailto:{{EMAIL}}">{{EMAIL}}</a>.</p>
+    </details>
   </div>
+
+  <!-- JSON-LD. No aggregateRating is emitted: there is no real first-party
+       rating to back one. See DISCOVERY.md. -->
+  <script type="application/ld+json">{{JSONLD}}</script>
 </body>
 </html>

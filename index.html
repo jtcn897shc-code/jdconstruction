@@ -3,63 +3,107 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ridgeline Home Services — Heating, cooling, plumbing &amp; electrical — done right the first time.</title>
-  <meta name="description" content="Ridgeline Home Services — Heating, cooling, plumbing &amp; electrical — done right the first time. Serving Abbotsford, Chilliwack, Mission, Langley, Surrey, Maple Ridge. Call (604) 555-0142." />
+  <title>JD Construction and Cleaning Services — Construction and cleaning, from one crew.</title>
+  <meta name="description" content="JD Construction and Cleaning Services — Construction and cleaning, from one crew. Renovations and cleaning from one crew, serving Drayton Valley · Brazeau County · Breton · Lodgepole · Cynthia · Buck Creek · Rocky Rapids · Warburg. Call (587) 277-3435." />
+  <meta name="theme-color" content="#0a1a3a" />
+  <link rel="icon" href="images/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png" />
+  <link rel="apple-touch-icon" href="images/favicon-180.png" />
+  <meta property="og:title" content="JD Construction and Cleaning Services" />
+  <meta property="og:description" content="Construction and cleaning, from one crew." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="images/favicon-512.png" />
+  <link rel="preload" href="fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="stylesheet" href="css/client-tokens.css" />
-  <script>window.__DESTURA_PHONE_HREF__ = "+16045550142"; window.__DESTURA_PHONE__ = "(604) 555-0142";</script>
+  <!-- Reveal-on-scroll is OPT-IN, set before first paint. If JS never runs,
+       nothing is ever hidden and the full page renders. See DESIGN.md §4. -->
+  <script>document.documentElement.classList.add("js");</script>
+  <script>window.__DESTURA_PHONE_HREF__ = "+15872773435"; window.__DESTURA_PHONE__ = "(587) 277-3435";</script>
   <script src="js/main.js" defer></script>
   <script src="js/chat.js" defer></script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
   <!-- ================= NAV ================= -->
   <header class="nav" id="nav">
-    <a href="#top" class="nav__brand">
-      <span class="nav__brand-mark">R</span>
-      Ridgeline Home Services
-    </a>
-    <nav class="nav__links">
-      <a href="#services">Services</a>
-      <a href="#proof">Our Work</a>
-      <a href="#area">Service Area</a>
-      <a href="#faq">FAQ</a>
-    </nav>
-    <a class="nav__phone" href="tel:+16045550142">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-      (604) 555-0142
-    </a>
-    <button class="nav__toggle" id="nav-toggle" aria-label="Open menu"><span></span><span></span></button>
+    <div class="nav__inner">
+      <a href="#top" class="nav__brand" aria-label="JD Construction and Cleaning Services — home">
+        <img class="nav__logo" src="images/logo.png" alt="" width="60" height="61" decoding="async" />
+        <span class="nav__brand-text">
+          <span class="nav__brand-name">JD</span>
+          <span class="nav__brand-sub">Construction &amp; Cleaning</span>
+        </span>
+      </a>
+      <nav class="nav__links" id="nav-links" aria-label="Primary">
+        <a href="#services">Services</a>
+        <a href="#why">Why JD</a>
+        <a href="#process">Process</a>
+        <a href="#area">Service Area</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <div class="nav__end">
+        <a class="nav__phone" href="tel:+15872773435">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span>(587) 277-3435</span>
+        </a>
+        <button class="nav__toggle" id="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
   </header>
 
-  <main id="top">
-    <!-- ================= HERO ================= -->
-    <section class="hero">
-      <div class="hero__scrim" aria-hidden="true"></div>
-      <div class="hero__content shell">
-        <div class="hero__trustline">
-          <span class="hero__badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 3 6v6c0 5 3.8 9.4 9 10 5.2-.6 9-5 9-10V6l-9-4z"/></svg>Fully licensed, bonded &amp; insured across all trades.</span>
-          <span class="hero__badge"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.4 7 .8-5.2 4.7 1.5 6.9L12 17l-6.2 3.8 1.5-6.9L2.1 9.2l7-.8z"/></svg>4.9★ · 310+ reviews</span>
+  <main id="main">
+    <!-- ================= HERO =================
+         Typographic, not photographic: no stock image to load, so there is
+         no broken-image or slow-LCP failure mode. The crest is the only
+         ornament (DESIGN.md §5). -->
+    <section class="hero" id="top">
+      <div class="hero__field" aria-hidden="true"></div>
+      <div class="shell hero__inner">
+        <div class="hero__copy">
+          <p class="hero__eyebrow"><span class="diamond" aria-hidden="true"></span>Filipino-Canadian, family-run.</p>
+          <h1 class="hero__title">We build it.<em>Then we clean it.</em></h1>
+          <p class="hero__lede">Most contractors hand back a finished room and a layer of drywall dust. We're both trades under one roof — the renovation and the spotless handover come from the same crew.</p>
+          <div class="hero__actions">
+            <a href="tel:+15872773435" class="btn btn--gold">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              Call (587) 277-3435
+            </a>
+            <a href="mailto:jdccservices.alberta@gmail.com?subject=Quote%20request" class="btn btn--outline">Request a walkthrough</a>
+          </div>
+          <p class="hero__note">Serving Drayton Valley &amp; Brazeau County · Reliable · Affordable · Quality Service</p>
         </div>
-        <h1 class="hero__title">Trusted HVAC, plumbing &amp; electrical for the Fraser Valley.</h1>
-        <p class="hero__sub">Heating, cooling, plumbing &amp; electrical — done right the first time. Serving Abbotsford, Chilliwack, Mission, Langley, Surrey, Maple Ridge.</p>
-        <div class="hero__actions">
-          <a href="tel:+16045550142" class="btn btn--call">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            Call Now — Same-Day Service
-          </a>
-          <a href="#contact" class="btn btn--ghost btn--on-dark">Get a Free Quote</a>
+        <div class="hero__crest">
+          <img src="images/logo.png" alt="JD Construction and Cleaning Services crest" width="538" height="547" fetchpriority="high" decoding="async" />
         </div>
       </div>
     </section>
 
-    <!-- ================= TRUST BAR ================= -->
-    <div class="trustbar">
-      <div class="shell trustbar__row">
-        <span class="trustbar__item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 3 6v6c0 5 3.8 9.4 9 10 5.2-.6 9-5 9-10V6l-9-4z"/></svg>Licensed &amp; Insured</span>
-        <span class="trustbar__item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>24/7 Emergency Service</span>
-        <span class="trustbar__item"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.4 7 .8-5.2 4.7 1.5 6.9L12 17l-6.2 3.8 1.5-6.9L2.1 9.2l7-.8z"/></svg>4.9★ (310+ Reviews)</span>
-        <span class="trustbar__item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Family-Owned Since 2009</span>
+    <!-- ================= TRUST BAND =================
+         Only claims we can actually stand behind. No review counts, no
+         years-in-business, no licensing claims — see DISCOVERY.md. -->
+    <div class="band">
+      <div class="shell band__row">
+        <span class="band__item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-6h6v6"/></svg>
+          Both trades, one company
+        </span>
+        <span class="band__item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          Filipino-Canadian, family-run.
+        </span>
+        <span class="band__item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Drayton Valley &amp; Brazeau County
+        </span>
+        <span class="band__item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+          Build &amp; clean quoted as one number
+        </span>
       </div>
     </div>
 
@@ -67,213 +111,364 @@
     <section class="section" id="services">
       <div class="shell">
         <div class="section__head" data-reveal>
-          <p class="kicker">What We Do</p>
-          <h2 class="section__title">Three trades. One trusted crew.</h2>
+          <p class="kicker"><span class="diamond" aria-hidden="true"></span>What we do</p>
+          <h2 class="section__title">Four services. Two trades. One crew.</h2>
         </div>
-        <div class="services__grid">
+        <div class="services">
           
-          <div class="service-card" data-reveal>
-            <span class="service-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/></svg></span>
-            <h3 class="service-card__title">Heating &amp; Cooling</h3>
-            <p class="service-card__line">Furnace repair, AC installs, heat pumps, and seasonal maintenance plans that keep small problems from becoming expensive ones.</p>
-          </div>
+          <article class="svc svc--lead" data-reveal>
+            <span class="svc__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 21h18"/><path d="M5 21V9l7-5 7 5v12"/><path d="M10 21v-6h4v6"/></svg></span>
+            <h3 class="svc__title">Renovations &amp; Construction</h3>
+            <p class="svc__blurb">Kitchens, bathrooms, basements and full interior renovations — framing through finishing carpentry. Built properly, and handed back clean.</p>
+          </article>
           
-          <div class="service-card" data-reveal>
-            <span class="service-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2.7s6 6.3 6 10.6a6 6 0 0 1-12 0c0-4.3 6-10.6 6-10.6z"/></svg></span>
-            <h3 class="service-card__title">Plumbing</h3>
-            <p class="service-card__line">Leak repair, drain cleaning, water heater installs, and fixture work — done clean, done once.</p>
-          </div>
+          <article class="svc " data-reveal>
+            <span class="svc__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 21h7l10-10a2.8 2.8 0 0 0-4-4L6 17z"/><path d="M14 5l4 4"/><path d="M5 14l4 4"/></svg></span>
+            <h3 class="svc__title">Post-Construction Cleaning</h3>
+            <p class="svc__blurb">The deep turnover clean after the trades leave: drywall dust, paint spatter, adhesive residue, window and fixture detail. Available on jobs we didn't build.</p>
+          </article>
           
-          <div class="service-card" data-reveal>
-            <span class="service-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2 4 14h6l-1 8 9-12h-6z"/></svg></span>
-            <h3 class="service-card__title">Electrical</h3>
-            <p class="service-card__line">Panel upgrades, rewiring, EV charger installs, and lighting — licensed electricians, not handymen.</p>
-          </div>
+          <article class="svc " data-reveal>
+            <span class="svc__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 21h16"/><path d="M6 21V10l6-4.5 6 4.5v11"/><path d="M10 14h4v7h-4z"/></svg></span>
+            <h3 class="svc__title">Residential Cleaning</h3>
+            <p class="svc__blurb">Recurring housekeeping, seasonal deep cleans, and move-in / move-out turnovers that actually pass an inspection.</p>
+          </article>
+          
+          <article class="svc " data-reveal>
+            <span class="svc__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 21h18"/><path d="M5 21V4h9v17"/><path d="M14 10h5v11"/><path d="M8 8h3M8 12h3M8 16h3"/></svg></span>
+            <h3 class="svc__title">Commercial Cleaning</h3>
+            <p class="svc__blurb">Offices, retail units and strata common areas, scheduled around your hours instead of ours.</p>
+          </article>
           
         </div>
       </div>
     </section>
 
-    <!-- ================= PROOF / JOBS ================= -->
-    <section class="section section--cream" id="proof">
+    <!-- ================= DIFFERENTIATOR ================= -->
+    <section class="section section--ink" id="why">
+      <div class="shell why">
+        <div class="why__lead" data-reveal>
+          <p class="kicker kicker--dark"><span class="diamond" aria-hidden="true"></span>Why JD</p>
+          <h2 class="section__title">One crew, start to spotless.</h2>
+          <p class="why__body">Hiring a contractor usually means hiring a cleaner afterwards — and chasing two companies, two schedules, two invoices. We do both. The people who built it are the people who clean it, so nothing gets blamed on the other trade.</p>
+          <a href="mailto:jdccservices.alberta@gmail.com?subject=Quote%20request" class="btn btn--gold">Get one quote for both</a>
+        </div>
+        <ul class="why__points">
+          
+          <li class="why__point" data-reveal>
+            <h3 class="why__point-title">No second phone call</h3>
+            <p class="why__point-body">The final clean is part of the job, not a separate contract you have to arrange while living in a construction zone.</p>
+          </li>
+          
+          <li class="why__point" data-reveal>
+            <h3 class="why__point-title">Nothing gets left for someone else</h3>
+            <p class="why__point-body">When the same crew builds and cleans, there's no argument about whose dust it is. It just gets done.</p>
+          </li>
+          
+          <li class="why__point" data-reveal>
+            <h3 class="why__point-title">We also clean for other builders</h3>
+            <p class="why__point-body">Contractors hire us for post-construction turnovers on jobs we didn't build. It's a service line, not an afterthought.</p>
+          </li>
+          
+        </ul>
+      </div>
+    </section>
+
+    <!-- ================= PROCESS ================= -->
+    <section class="section" id="process">
       <div class="shell">
         <div class="section__head" data-reveal>
-          <p class="kicker">Recent Work</p>
-          <h2 class="section__title">Real jobs, done right.</h2>
+          <p class="kicker"><span class="diamond" aria-hidden="true"></span>How it runs</p>
+          <h2 class="section__title">From walkthrough to handover.</h2>
         </div>
-        <div class="jobs__grid">
+        <ol class="steps">
           
-          <div data-reveal>
-            <div class="job-card__frame">
-              <span class="job-card__tag">Full Furnace Replacement</span>
-            </div>
-            <div class="job-card__caption">
-              <p class="job-card__title">Full Furnace Replacement</p>
-              <p class="job-card__meta">Abbotsford, BC · High-efficiency furnace swap, new ductwork sealed, completed in one day.</p>
-            </div>
-          </div>
+          <li class="step" data-reveal>
+            <span class="step__num">01</span>
+            <h3 class="step__title">Walkthrough</h3>
+            <p class="step__body">We look at the space in person and quote the build and the final clean together, in one number.</p>
+          </li>
           
-          <div data-reveal>
-            <div class="job-card__frame">
-              <span class="job-card__tag">Electrical Panel Upgrade</span>
-            </div>
-            <div class="job-card__caption">
-              <p class="job-card__title">Electrical Panel Upgrade</p>
-              <p class="job-card__meta">Chilliwack, BC · 100A to 200A service upgrade to support a new EV charger and home addition.</p>
-            </div>
-          </div>
+          <li class="step" data-reveal>
+            <span class="step__num">02</span>
+            <h3 class="step__title">Build</h3>
+            <p class="step__body">Construction runs with the site kept contained — dust barriers up, walkways protected, tools off your floors nightly.</p>
+          </li>
           
-          <div data-reveal>
-            <div class="job-card__frame">
-              <span class="job-card__tag">Tankless Water Heater Install</span>
-            </div>
-            <div class="job-card__caption">
-              <p class="job-card__title">Tankless Water Heater Install</p>
-              <p class="job-card__meta">Langley, BC · Converted from a failing tank unit — endless hot water, smaller footprint.</p>
-            </div>
-          </div>
+          <li class="step" data-reveal>
+            <span class="step__num">03</span>
+            <h3 class="step__title">Final clean</h3>
+            <p class="step__body">The same company returns for the turnover clean. No handoff, no second contract, no waiting on another crew's calendar.</p>
+          </li>
           
+          <li class="step" data-reveal>
+            <span class="step__num">04</span>
+            <h3 class="step__title">Handover</h3>
+            <p class="step__body">You walk the finished space with us before we call it done. If something isn't right, we're still standing there.</p>
+          </li>
+          
+        </ol>
+      </div>
+    </section>
+
+    <!-- ================= WORK ================= -->
+    <section class="section section--mist" id="work">
+      <div class="shell">
+        <div class="section__head" data-reveal>
+          <p class="kicker"><span class="diamond" aria-hidden="true"></span>Recent work</p>
+          <h2 class="section__title">The work we hand back.</h2>
+          <p class="section__note">Layout placeholder — JD's real project photography drops straight in here.</p>
         </div>
-        <div class="jobs__rating" data-reveal>
-          <span class="jobs__stars">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.4 7 .8-5.2 4.7 1.5 6.9L12 17l-6.2 3.8 1.5-6.9L2.1 9.2l7-.8z"/></svg>
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.4 7 .8-5.2 4.7 1.5 6.9L12 17l-6.2 3.8 1.5-6.9L2.1 9.2l7-.8z"/></svg>
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.4 7 .8-5.2 4.7 1.5 6.9L12 17l-6.2 3.8 1.5-6.9L2.1 9.2l7-.8z"/></svg>
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.4 7 .8-5.2 4.7 1.5 6.9L12 17l-6.2 3.8 1.5-6.9L2.1 9.2l7-.8z"/></svg>
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.4 7 .8-5.2 4.7 1.5 6.9L12 17l-6.2 3.8 1.5-6.9L2.1 9.2l7-.8z"/></svg>
-          </span>
-          <p class="jobs__rating-text">4.9 out of 5 <span>from 310+ Google reviews</span></p>
+        <div class="jobs">
+          
+          <figure class="job" data-reveal>
+            <div class="job__frame" data-kind="construction">
+              <span class="job__placeholder">Build</span>
+            </div>
+            <figcaption class="job__cap">
+              <p class="job__title">Kitchen &amp; bath renovations</p>
+            </figcaption>
+          </figure>
+          
+          <figure class="job" data-reveal>
+            <div class="job__frame" data-kind="postconstruction">
+              <span class="job__placeholder">Turnover clean</span>
+            </div>
+            <figcaption class="job__cap">
+              <p class="job__title">Post-construction turnovers</p>
+            </figcaption>
+          </figure>
+          
+          <figure class="job" data-reveal>
+            <div class="job__frame" data-kind="construction">
+              <span class="job__placeholder">Build</span>
+            </div>
+            <figcaption class="job__cap">
+              <p class="job__title">Basement build-outs</p>
+            </figcaption>
+          </figure>
+          
         </div>
       </div>
     </section>
 
-    <!-- ================= FINANCING ================= -->
-    <section class="section section--dark">
-      <div class="shell financing">
-        <div data-reveal>
-          <p class="kicker kicker--on-dark">Financing</p>
-          <h2 class="section__title">Don't let cost delay comfort.</h2>
-          <p class="financing__line">Big-ticket jobs shouldn't wait on a bank transfer. Flexible financing is available on system installs and replacements, with same-day approval in most cases.</p>
-          <a href="#contact" class="btn btn--primary">Ask About Financing</a>
-        </div>
-        <div class="financing__badges" data-reveal>
-          
-          <span class="financing__badge">0% Financing Available</span>
-          
-          <span class="financing__badge">Same-Day Approval</span>
-          
-          <span class="financing__badge">Flexible Terms</span>
-          
-        </div>
-      </div>
-    </section>
+    <!-- ================= REVIEWS =================
+         Rendered ONLY when config.proof.reviews has real, attributable
+         entries. Currently empty on purpose — see DISCOVERY.md. -->
+    
 
     <!-- ================= SERVICE AREA ================= -->
     <section class="section" id="area">
-      <div class="shell area__grid">
+      <div class="shell area">
         <div data-reveal>
-          <p class="kicker">Where We Work</p>
-          <h2 class="section__title">Proudly serving the Fraser Valley.</h2>
-          <p class="financing__line" style="color: var(--ash);">Not sure if you're in range? Call us — we cover more ground than most.</p>
+          <p class="kicker"><span class="diamond" aria-hidden="true"></span>Where we work</p>
+          <h2 class="section__title">Across Drayton Valley &amp; Brazeau County.</h2>
+          <p class="area__note">Not sure if you're in range? Call and ask — we cover more ground than the list suggests.</p>
         </div>
         <ul class="area__list" data-reveal>
           
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Abbotsford</li>
+          <li><span class="diamond diamond--sm" aria-hidden="true"></span>Drayton Valley</li>
           
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Chilliwack</li>
+          <li><span class="diamond diamond--sm" aria-hidden="true"></span>Brazeau County</li>
           
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Mission</li>
+          <li><span class="diamond diamond--sm" aria-hidden="true"></span>Breton</li>
           
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Langley</li>
+          <li><span class="diamond diamond--sm" aria-hidden="true"></span>Lodgepole</li>
           
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Surrey</li>
+          <li><span class="diamond diamond--sm" aria-hidden="true"></span>Cynthia</li>
           
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Maple Ridge</li>
+          <li><span class="diamond diamond--sm" aria-hidden="true"></span>Buck Creek</li>
+          
+          <li><span class="diamond diamond--sm" aria-hidden="true"></span>Rocky Rapids</li>
+          
+          <li><span class="diamond diamond--sm" aria-hidden="true"></span>Warburg</li>
           
         </ul>
       </div>
     </section>
 
     <!-- ================= FAQ ================= -->
-    <section class="section section--cream" id="faq">
-      <div class="shell" style="max-width: 780px;">
+    <section class="section section--mist" id="faq">
+      <div class="shell shell--narrow">
         <div class="section__head" data-reveal>
-          <p class="kicker">Questions</p>
+          <p class="kicker"><span class="diamond" aria-hidden="true"></span>Questions</p>
           <h2 class="section__title">Good to know.</h2>
         </div>
-        <div data-reveal>
+        <div class="faq" data-reveal>
           
-          <div class="faq__item">
-            <h3 class="faq__q">Do you offer emergency service?</h3>
-            <p class="faq__a">Yes — we're available 24/7 for no-heat, no-cool, active leaks, and electrical emergencies. Call anytime.</p>
-          </div>
+          <details class="faq__item">
+            <summary class="faq__q">Do you really do both construction and cleaning?<span class="faq__mark" aria-hidden="true"></span></summary>
+            <div class="faq__a"><p>Yes — that's the whole idea, and it's the name on the door. Most clients hire us for a renovation and the final clean comes with it. You can also book either one on its own.</p></div>
+          </details>
           
-          <div class="faq__item">
-            <h3 class="faq__q">Are you licensed and insured?</h3>
-            <p class="faq__a">Yes, fully licensed, bonded, and insured across HVAC, plumbing, and electrical work.</p>
-          </div>
+          <details class="faq__item">
+            <summary class="faq__q">Can I book cleaning without a renovation?<span class="faq__mark" aria-hidden="true"></span></summary>
+            <div class="faq__a"><p>Absolutely. Recurring residential cleaning, one-off deep cleans, move-in and move-out turnovers, and commercial contracts are all standalone services.</p></div>
+          </details>
           
-          <div class="faq__item">
-            <h3 class="faq__q">What areas do you serve?</h3>
-            <p class="faq__a">Abbotsford, Chilliwack, Mission, Langley, Surrey, and Maple Ridge — reach out if you're just outside this area, we may still be able to help.</p>
-          </div>
+          <details class="faq__item">
+            <summary class="faq__q">Do you do post-construction cleanup for other contractors?<span class="faq__mark" aria-hidden="true"></span></summary>
+            <div class="faq__a"><p>Yes. Builders and renovators hire us for turnover cleans on projects we had no part in building. Get in touch with the site details and timeline.</p></div>
+          </details>
           
-          <div class="faq__item">
-            <h3 class="faq__q">Do you offer financing for big jobs?</h3>
-            <p class="faq__a">Yes, flexible financing is available on system installs and replacements, with same-day approval in most cases.</p>
-          </div>
+          <details class="faq__item">
+            <summary class="faq__q">What areas do you serve?<span class="faq__mark" aria-hidden="true"></span></summary>
+            <div class="faq__a"><p>Drayton Valley and the surrounding Brazeau County communities — Breton, Lodgepole, Cynthia, Buck Creek, Rocky Rapids and Warburg. If you're further out, ask — we may still be able to help.</p></div>
+          </details>
           
-          <div class="faq__item">
-            <h3 class="faq__q">How do I book a service call?</h3>
-            <p class="faq__a">Call us directly for anything urgent, or use the chat on this site to get a quote and find a time that works.</p>
-          </div>
+          <details class="faq__item">
+            <summary class="faq__q">How do I get a quote?<span class="faq__mark" aria-hidden="true"></span></summary>
+            <div class="faq__a"><p>Call or email and we'll arrange a walkthrough. For renovations we quote the build and the final clean together, so you get one number rather than two.</p></div>
+          </details>
           
         </div>
       </div>
     </section>
 
     <!-- ================= FINAL CTA ================= -->
-    <section class="cta-final shell" id="contact">
-      <p class="kicker" style="justify-content:center;">Ready When You Are</p>
-      <h2 class="cta-final__title">Something not working right? Let's fix it.</h2>
-      <div class="cta-final__actions">
-        <a href="tel:+16045550142" class="btn btn--call">Call (604) 555-0142</a>
-        <a href="mailto:hello@ridgelinehomeservices.ca" class="btn btn--ghost">Email Us</a>
+    <section class="section section--ink cta" id="contact">
+      <div class="shell cta__inner">
+        <p class="kicker kicker--dark" style="justify-content:center;"><span class="diamond" aria-hidden="true"></span>Ready when you are</p>
+        <h2 class="cta__title">Building something, or just need it spotless?</h2>
+        <p class="cta__lede">Tell us what the space needs. We'll quote the build and the clean together.</p>
+        <div class="cta__actions">
+          <a href="tel:+15872773435" class="btn btn--gold">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Call (587) 277-3435
+          </a>
+          <a href="https://wa.me/15872773435" class="btn btn--outline" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.14-.14.3-.35.45-.53.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.38-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.07-.13-.27-.2-.57-.35z"/><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.87 9.87 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2zm0 18.15h-.01c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.25-8.23 2.2 0 4.27.86 5.83 2.42a8.19 8.19 0 0 1 2.41 5.82c0 4.54-3.7 8.23-8.23 8.23z"/></svg>
+            WhatsApp
+          </a>
+          <a href="mailto:jdccservices.alberta@gmail.com?subject=Quote%20request" class="btn btn--outline">Email us</a>
+        </div>
+        <p class="cta__where">Drayton Valley &amp; Brazeau County · Reliable · Affordable · Quality Service</p>
       </div>
     </section>
   </main>
 
   <!-- ================= FOOTER ================= -->
   <footer class="footer">
-    <div class="shell footer__row">
-      <span class="footer__brand">Ridgeline Home Services</span>
-      <span>&copy; 2026 Ridgeline Home Services. Serving Abbotsford, Chilliwack, Mission, Langley, Surrey, Maple Ridge.</span>
-      <span>(604) 555-0142 · hello@ridgelinehomeservices.ca</span>
+    <div class="shell footer__grid">
+      <div class="footer__brand">
+        <img class="footer__logo" src="images/logo.png" alt="" width="84" height="85" loading="lazy" decoding="async" />
+        <p class="footer__name">JD Construction and Cleaning Services</p>
+        <p class="footer__tag">Filipino-Canadian, family-run.</p>
+      </div>
+      <div class="footer__col">
+        <p class="footer__h">Services</p>
+        
+        <a href="#services">Renovations &amp; Construction</a>
+        
+        <a href="#services">Post-Construction Cleaning</a>
+        
+        <a href="#services">Residential Cleaning</a>
+        
+        <a href="#services">Commercial Cleaning</a>
+        
+      </div>
+      <div class="footer__col">
+        <p class="footer__h">Contact</p>
+        <a href="tel:+15872773435">(587) 277-3435</a>
+        <a href="https://wa.me/15872773435" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="mailto:jdccservices.alberta@gmail.com">jdccservices.alberta@gmail.com</a>
+        <p class="footer__muted">Drayton Valley, AB</p>
+        <p class="footer__muted">Serving Drayton Valley · Brazeau County · Breton · Lodgepole · Cynthia · Buck Creek · Rocky Rapids · Warburg</p>
+      </div>
+    </div>
+    <div class="shell footer__base">
+      <span>&copy; 2026 JD Construction and Cleaning Services.</span>
+      <span>Drayton Valley &amp; Brazeau County</span>
     </div>
   </footer>
 
-  <!-- ================= CHAT CONCIERGE ================= -->
-  <button class="chat-trigger" id="chat-trigger" type="button" aria-haspopup="dialog" aria-controls="chat-overlay" aria-expanded="false">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-    Ask Ridgeline Home Services
-  </button>
-  <div class="chat-overlay" id="chat-overlay" role="dialog" aria-modal="true" aria-label="Ask Ridgeline Home Services" aria-hidden="true">
+  <!-- ================= CHAT CONCIERGE =================
+       The trigger is an <a> with a real tel: href, not a <button>. JS
+       upgrades it to the chat overlay only after confirming it can; if JS
+       fails the visitor still reaches a working phone link. -->
+  <a class="chat-trigger" id="chat-trigger" href="tel:+15872773435" aria-label="Ask JD Construction and Cleaning Services — open chat" aria-haspopup="dialog" aria-controls="chat-overlay" aria-expanded="false">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+    <span class="chat-trigger__label">Ask JD</span>
+  </a>
+  <div class="chat-overlay" id="chat-overlay" role="dialog" aria-modal="true" aria-label="Ask JD Construction and Cleaning Services" aria-hidden="true">
     <div class="chat-bar">
-      <span class="chat-bar__title">Ridgeline Home Services</span>
-      <button class="chat-close" id="chat-close" aria-label="Close">&times;</button>
+      <span class="chat-bar__title">Ask JD Construction and Cleaning Services</span>
+      <button class="chat-close" id="chat-close" type="button" aria-label="Close chat">&times;</button>
     </div>
     <div class="chat-thread" id="chat-thread"></div>
     <div class="chat-suggestions" id="chat-suggestions">
-      <button class="chat-chip" type="button">Do you offer emergency service?</button>
-      <button class="chat-chip" type="button">Do you offer financing?</button>
+      <button class="chat-chip" type="button">Do you do both construction and cleaning?</button>
+      <button class="chat-chip" type="button">Can I book cleaning on its own?</button>
       <button class="chat-chip" type="button">What areas do you serve?</button>
     </div>
     <form class="chat-input" id="chat-form">
-      <textarea id="chat-field" rows="1" placeholder="Ask a question..." required></textarea>
+      <textarea id="chat-field" rows="1" placeholder="Ask a question…" aria-label="Your question" required></textarea>
       <button class="chat-send" type="submit" aria-label="Send">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4z"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4z"/></svg>
       </button>
     </form>
+    <details class="chat-fallback">
+      <summary>Rather talk to a person?</summary>
+      <p>Call <a href="tel:+15872773435">(587) 277-3435</a>, message us on <a href="https://wa.me/15872773435" target="_blank" rel="noopener">WhatsApp</a>, or email <a href="mailto:jdccservices.alberta@gmail.com">jdccservices.alberta@gmail.com</a>.</p>
+    </details>
   </div>
+
+  <!-- JSON-LD. No aggregateRating is emitted: there is no real first-party
+       rating to back one. See DISCOVERY.md. -->
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "HomeAndConstructionBusiness",
+  "name": "JD Construction and Cleaning Services",
+  "description": "Construction and cleaning, from one crew.",
+  "telephone": "(587) 277-3435",
+  "email": "jdccservices.alberta@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Drayton Valley",
+    "addressRegion": "AB",
+    "postalCode": "T7A 0C1",
+    "addressCountry": "CA"
+  },
+  "areaServed": [
+    {
+      "@type": "Place",
+      "name": "Drayton Valley"
+    },
+    {
+      "@type": "Place",
+      "name": "Brazeau County"
+    },
+    {
+      "@type": "Place",
+      "name": "Breton"
+    },
+    {
+      "@type": "Place",
+      "name": "Lodgepole"
+    },
+    {
+      "@type": "Place",
+      "name": "Cynthia"
+    },
+    {
+      "@type": "Place",
+      "name": "Buck Creek"
+    },
+    {
+      "@type": "Place",
+      "name": "Rocky Rapids"
+    },
+    {
+      "@type": "Place",
+      "name": "Warburg"
+    }
+  ],
+  "knowsAbout": [
+    "Renovations & Construction",
+    "Post-Construction Cleaning",
+    "Residential Cleaning",
+    "Commercial Cleaning"
+  ]
+}</script>
 </body>
 </html>
